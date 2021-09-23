@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScriptLoaderService } from '../script-loader.service';
 
 @Component({
   selector: 'app-b',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scriptLoader: ScriptLoaderService) { }
 
   ngOnInit(): void {
+    // this.scriptLoader.load('list').then(() => {
+    //   console.log('hello ember list loaded correctly')
+    // })
   }
 
 }
